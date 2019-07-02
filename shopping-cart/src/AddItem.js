@@ -3,19 +3,20 @@ import AddItemSelect from './AddItemSelect';
 
 class AddItem extends Component {
 state = {}
-render() {
+
+render = (onAdd) => {
   return (
     <div className='container'>
-  <form>
+  <form onSubmit = {this.props.onAdd}>
 
   <div className="form-group">
-    <label forHTML="quantity">Quantity</label>
-    <input type="number" class="form-control" id="quantity" />
+    <label>Quantity</label>
+    <input name='quantity' type="number" className="form-control" id="quantity" />
   </div>
   <div className="form-group">
-    <label forHTML="product">Product</label>
-    <select className="form-control" id="product">
-      {this.props.list.map(item => <AddItemSelect wut = {item} />)}
+    <label>Product</label>
+    <select name='product' className="form-control" id="product">
+      {this.props.list.map(item => <AddItemSelect key = {item.name} wut = {item} />)}
     </select>
   </div>
   <button type="submit" className="btn btn-primary">Submit</button>

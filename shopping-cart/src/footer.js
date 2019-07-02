@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = (props) => {
   return (
     <nav className="navbar navbar-dark bg-dark">
-      <a className="navbar-brand" href="#">&copy; {props.copyright}</a>
+      <h4 className="navbar-brand">&copy; {props.copyright}</h4>
     </nav>
   )
 }

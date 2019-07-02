@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import AddItemSelect from './AddItemSelect';
 
 class AddItem extends Component {
 state = {}
@@ -6,18 +7,18 @@ render() {
   return (
     <div className='container'>
   <form>
-  <div class="form-group">
-    <label for="quantity">Quantity</label>
+
+  <div className="form-group">
+    <label forHTML="quantity">Quantity</label>
     <input type="number" class="form-control" id="quantity" />
   </div>
-  <div class="form-group">
-    <label for="product">Product</label>
-    <select class="form-control" id="product">
-      <option>1</option>
-
+  <div className="form-group">
+    <label forHTML="product">Product</label>
+    <select className="form-control" id="product">
+      {this.props.list.map(item => <AddItemSelect wut = {item} />)}
     </select>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" className="btn btn-primary">Submit</button>
 </form>
 </div>
   )

@@ -11,7 +11,7 @@ render = (onAdd) => {
 
   <div className="form-group">
     <label>Quantity</label>
-    <input name='quantity' type="number" className="form-control" id="quantity" />
+    <input defaultValue= '1' name='quantity' type="number" className="form-control" id="quantity" />
   </div>
   <div className="form-group">
     <label>Product</label>

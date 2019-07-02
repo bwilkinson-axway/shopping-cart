@@ -18,7 +18,7 @@ const CartItems = ({item}) => {
             <div className="col-md-2">Quantity</div>
           </div>
         </div>
-          {item.map(item => <div key={item.id} className="list-group-item"> <CartItem key={item.name} wut = {item} /> </div>)}
+          {item.map(item => <div key={item.id} className="list-group-item"> <CartItem key={item.id} wut = {item} /> </div>)}
       </div>
       <p> Total Price: $ {total / 100}</p>
     </div>

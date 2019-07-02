@@ -1,13 +1,12 @@
 import React from 'react';
 
 const CartItem = ({wut}) => {
-  console.log(wut)
   return (
-    <div class="collection-item">
-    <div class="row">
-      <div class="col-md-8">{wut.product.name}</div>
-      <div class="col-md-2">${wut.product.priceInCents / 100}</div>
-      <div class="col-md-2">{wut.quantity}</div>
+    <div className="collection-item">
+    <div className="row">
+      <div className="col-md-8">{wut.product.name}</div>
+      <div className="col-md-2">${wut.product.priceInCents / 100}</div>
+      <div className="col-md-2">{wut.quantity}</div>
     </div>
     </div>
   )

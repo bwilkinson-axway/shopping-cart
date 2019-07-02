@@ -13,7 +13,7 @@ const CartItems = ({item}) => {
             <div className="col-md-2">Quantity</div>
           </div>
         </div>
-          {item.map(item => <CartItem wut = {item} />)}
+          {item.map(item => <div className="list-group-item"> <CartItem wut = {item} /> </div>)}
       </div>
     </div>
   )
